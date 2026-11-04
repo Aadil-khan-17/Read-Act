@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+data/
+venv/
+.venv/
+*.log
+*.pdf
+*.docx
+*.xlsx
+*.xlsm
+*.csv
+redacted-test.pdf
+data-test.pdf
+data-result.json

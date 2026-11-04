@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redactly</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">HYBRID PRIVACY LAYER</p>
+        <h1>Redactly</h1>
+      </div>
+      <span id="status" class="status">Ready</span>
+    </header>
+
+    <section class="upload-panel">
+      <label class="dropzone" id="dropzone">
+        <input id="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.csv,.xlsx,.xlsm,.docx">
+        <strong>Drop a document here</strong>
+        <span>PDF, image, CSV, Excel or Word</span>
+      </label>
+      <button id="analyze" disabled>Analyze document</button>
+    </section>
+
+    <section class="instruction-panel" id="instructionPanel">
+      <div class="instruction-heading">
+        <div>
+          <p class="eyebrow">ITERATIVE REDACTION</p>
+          <h2>What should be hidden?</h2>
+        </div>
+        <button class="secondary" id="savePolicy">Save current mode</button>
+      </div>
+      <div class="instruction-controls">
+        <select id="policySelect" aria-label="Saved redaction mode">
+          <option value="">Custom instruction</option>
+        </select>
+        <textarea id="instruction" rows="3" placeholder="Example: Redact every patient name, study ID, dose, and adverse event. Keep protocol numbers visible unless they identify a participant."></textarea>
+        <button id="instruct" disabled>Apply instruction</button>
+      </div>
+      <div class="save-row" id="saveRow">
+        <input id="policyName" placeholder="Mode name, e.g. Clinical trial disclosure">
+        <input id="policyDescription" placeholder="Optional description">
+        <button id="confirmSave">Save mode</button>
+        <button class="secondary" id="cancelSave">Cancel</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <article>
+        <div class="section-heading">
+          <h2>Extracted text</h2>
+          <span id="pageCount"></span>
+        </div>
+        <pre id="text">No document loaded.</pre>
+      </article>
+      <aside>
+        <div class="section-heading">
+          <h2>Findings</h2>
+          <span id="findingCount">0</span>
+        </div>
+        <div id="findings"></div>
+        <button id="export" disabled>Export redacted document</button>
+      </aside>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
