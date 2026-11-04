@@ -1,4 +1,4 @@
-# Redactly
+# Read-Act
 
 A hackathon prototype for hybrid deterministic and AI-assisted document redaction.
 

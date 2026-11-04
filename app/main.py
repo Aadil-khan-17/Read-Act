@@ -28,7 +28,7 @@ DATA_DIR.mkdir(exist_ok=True)
 UPLOAD_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-app = FastAPI(title="Redactly", version="0.1.0")
+app = FastAPI(title="Read-Act", version="0.1.0")
 
 for candidate in (
     r"C:\Program Files\Tesseract-OCR\tesseract.exe",
